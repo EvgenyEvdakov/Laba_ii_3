@@ -2,6 +2,9 @@
 # -*- coding: utf-8 -*-
 
 import unittest
+import sys
+
+sys.path.append('../src')
 from idz1 import longest_path
 
 
