@@ -2,6 +2,9 @@
 # -*- coding: utf-8 -*-
 
 import unittest
+import sys
+
+sys.path.append('../src')
 from idz3 import Node, Problem, depth_first_recursive_search
 
 class TestGraphSearch(unittest.TestCase):
