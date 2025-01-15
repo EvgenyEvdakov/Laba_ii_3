@@ -6,14 +6,13 @@
 # разработанной в предыдущем пункте программы, подсчитать самый длинный
 # путь.
 
+
 def longest_path(matrix, start_char):
     rows = len(matrix)
-    cols = len(matrix[])
+    cols = len(matrix[0])
 
     # Возможные направления перемещения (восемь направлений)
-    directions = [(-1, -1), (-1, 0), (-1, 1),
-                  (0, -1),        (0, 1),
-                  (1, -1), (1, 0), (1, 1)]
+    directions = [(-1, -1), (-1, 0), (-1, 1), (0, -1), (0, 1), (1, -1), (1, 0), (1, 1)]
 
     memo = {}
 
@@ -25,8 +24,7 @@ def longest_path(matrix, start_char):
 
         for dx, dy in directions:
             new_x, new_y = x + dx, y + dy
-            if (0 <= new_x < rows and 0 <= new_y < cols and
-                    ord(matrix[new_x][new_y]) == ord(prev_char) + 1):
+            if 0 <= new_x < rows and 0 <= new_y < cols and ord(matrix[new_x][new_y]) == ord(prev_char) + 1:
                 max_length = max(max_length, 1 + dfs(new_x, new_y, matrix[new_x][new_y]))
 
         memo[(x, y)] = max_length
@@ -42,6 +40,7 @@ def longest_path(matrix, start_char):
 
     return longest
 
+
 if __name__ == "__main__":
     # Новая матрица
     new_matrix = [
@@ -51,9 +50,9 @@ if __name__ == "__main__":
         ["R", "Q", "P", "O", "N", "U", "T"],
         ["S", "T", "U", "V", "W", "X", "Y"],
         ["Z", "A", "B", "C", "D", "E", "F"],
-        ["G", "H", "I", "J", "K", "L", "M"]
+        ["G", "H", "I", "J", "K", "L", "M"],
     ]
-    start_char = 'M'
+    start_char = "M"
 
     # Подсчет самого длинного пути
     longest_path_length = longest_path(new_matrix, start_char)

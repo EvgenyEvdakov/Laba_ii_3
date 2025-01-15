@@ -6,6 +6,7 @@
 # алгоритма поиска в глубину находит минимальное расстояние между
 # начальным и конечным пунктами.
 
+
 class Node:
     def __init__(self, state, parent=None, path_cost=0):
         self.state = state  # Текущий узел
@@ -55,7 +56,7 @@ def expand(graph, node):
         yield Node(neighbor, node, node.path_cost + weight)
 
 
-def depth_first_recursive_search(problem, graph, node=None, min_distance=float('inf'), min_path=None):
+def depth_first_recursive_search(problem, graph, node=None, min_distance=float("inf"), min_path=None):
     """
     Рекурсивный поиск в глубину с нахождением минимального пути.
     """
@@ -111,7 +112,7 @@ if __name__ == "__main__":
         25: [(14, 54), (26, 46)],
         26: [(25, 46)],
         27: [(24, 40), (28, 57)],
-        28: [(27, 57)]
+        28: [(27, 57)],
     }
 
     # Задача: найти кратчайший путь от узла 18 до узла 12

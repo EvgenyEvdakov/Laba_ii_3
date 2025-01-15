@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import unittest
 import sys
+import unittest
 
-sys.path.append('../src')
+
+sys.path.append("../src")
 from idz3 import Node, Problem, depth_first_recursive_search
+
 
 class TestGraphSearch(unittest.TestCase):
     def setUp(self):
@@ -30,7 +32,7 @@ class TestGraphSearch(unittest.TestCase):
         problem = Problem(1, 10)  # Узел 10 отсутствует
         path, distance = depth_first_recursive_search(problem, self.graph)
         self.assertIsNone(path)
-        self.assertEqual(distance, float('inf'))
+        self.assertEqual(distance, float("inf"))
 
     def test_same_start_and_goal(self):
         # Тестируем случай, когда начальный и конечный узлы совпадают

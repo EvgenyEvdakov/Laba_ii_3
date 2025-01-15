@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import unittest
 import sys
+import unittest
 
-sys.path.append('../src')
+
+sys.path.append("../src")
 from idz1 import longest_path
 
 
@@ -18,7 +19,7 @@ class TestLongestPath(unittest.TestCase):
             ["R", "Q", "P", "O", "N", "U", "T"],
             ["S", "T", "U", "V", "W", "X", "Y"],
             ["Z", "A", "B", "C", "D", "E", "F"],
-            ["G", "H", "I", "J", "K", "L", "M"]
+            ["G", "H", "I", "J", "K", "L", "M"],
         ]
 
     def test_longest_path_from_T(self):
