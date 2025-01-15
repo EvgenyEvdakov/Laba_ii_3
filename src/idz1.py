@@ -8,7 +8,7 @@
 
 def longest_path(matrix, start_char):
     rows = len(matrix)
-    cols = len(matrix[0])
+    cols = len(matrix[])
 
     # Возможные направления перемещения (восемь направлений)
     directions = [(-1, -1), (-1, 0), (-1, 1),
